@@ -2,13 +2,10 @@
 <html>
   <head>
     <title>Selouse</title>
-
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    <script
+      src="https://kit.fontawesome.com/ddd674e1ab.js"
       crossorigin="anonymous"
-    />
+    ></script>
     <link
       href="https://fonts.googleapis.com/css?family=Raleway"
       rel="stylesheet"
@@ -66,7 +63,6 @@
     <div id="results"></div>
 
     <!-- Your Code Here -->
-    <!-- You should start doing handlebar stuff here -->
     <script id="template-apartments" type="text/x-handlebars-template">
       {{#if apartments}}
         <ul>
@@ -76,12 +72,12 @@
         <p class="l-addr label">Address:</p>
         <p class="address">{{this.address}}</p>
         <p class="l-price label">Price: </p>
-        <p class="price">{{formatNumber price style="currency" currency="USD"}}</p>
+        <p class="price">{{this.price}}</p>
         <p class="l-rooms label">Rooms: </p>
         <p class="rooms">{{this.rooms}}</p>
         {{#if this.parking}}
-          <p class="l-park label">Parking: </p>
-          <p class="parking">Yes</p>
+          <p class="l-park label"><i class="fas fa-car-side"></i></p>
+          <p class="parking"></p>
         {{/if}}
         {{#if this.immediate}}
           <p class="l-immediate label">Name: </p>
@@ -100,12 +96,12 @@
     <!-- Your Code Here -->
 
     <script
-      src="https://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
-    <!-- <script src="handlebars-intl/dist/handlebars-intl.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"></script>
+    <script src="handlebars-intl/dist/handlebars-intl.min.js"></script>
     <script src="apt-data.js"></script>
     <script src="apt-filter.js"></script>
     <script src="main.js"></script>

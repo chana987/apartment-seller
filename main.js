@@ -1,4 +1,3 @@
-// HandlebarsIntl.registerWith(Handlebars);
 
 $("button").on("click", function () {
     let address = $("#addr-input").val()
@@ -14,7 +13,6 @@ $("button").on("click", function () {
 
 const renderApts = function (apartments) {
     $("#results").empty()
-    console.log(apartments) //array of apartments to render
     //Your code goes here.
     const source = $("#template-apartments").html()
     const template = Handlebars.compile(source)
@@ -22,4 +20,4 @@ const renderApts = function (apartments) {
     $("#results").append(newHTML)
 }
 
-renderApts(apartments) //renders apartments when page loads
+renderApts(apartments)
