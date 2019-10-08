@@ -67,7 +67,8 @@ label {
     "i la a"
     "i lpr p"
     "i lr r"
-    "i lpark park";
+    "i park feat"
+    "i limm imm";
   box-shadow: 1px 1px 3px #0a1612;
   margin: 20px;
   padding: 20px;
@@ -127,10 +128,12 @@ button:active {
 }
 
 .result > .l-park {
-  grid-area: lpark;
+  grid-area: park;
 }
 
 .result > .l-immediate {
+  grid-area: limm;
+
 }
 
 .result > .address {
@@ -145,11 +148,12 @@ button:active {
   grid-area: r;
 }
 
-.result > .parking {
-  grid-area: park;
+.result > .features {
+  grid-area: feat;
 }
 
 .result > .immediate {
+  grid-area: imm;
 }
 
 .no-match {

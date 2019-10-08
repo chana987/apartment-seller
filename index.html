@@ -68,26 +68,27 @@
         <ul>
           {{#each apartments}}
             <li class="result">
-        <img src="{{this.img}}" alt="">
-        <p class="l-addr label">Address:</p>
-        <p class="address">{{this.address}}</p>
-        <p class="l-price label">Price: </p>
-        <p class="price">{{this.price}}</p>
-        <p class="l-rooms label">Rooms: </p>
-        <p class="rooms">{{this.rooms}}</p>
-        {{#if this.parking}}
-          <p class="l-park label"><i class="fas fa-car-side"></i></p>
-          <p class="parking"></p>
-        {{/if}}
-        {{#if this.immediate}}
-          <p class="l-immediate label">Name: </p>
-          <p class="immediate">{{this.contactDetails.name}}</p>
-          <p class="l-immediate label">Email: </p>
-          <p class="immediate">{{this.contactDetails.email}}</p>
-          </p>
-        {{/if}}
-        </li>
-        {{/each}}
+              <img src="{{this.img}}" alt="">
+              <p class="l-addr label">Address:</p>
+              <p class="address">{{this.address}}</p>
+              <p class="l-price label">Price: </p>
+              <p class="price">{{this.price}}</p>
+              <p class="l-rooms label">Rooms: </p>
+              <p class="rooms">{{this.rooms}}</p>
+            {{#if this.parking}}
+              <p class="l-park label"><i class="fas fa-car-side"></i></p>
+            {{/if}}
+              <div class="features">
+                {{#each this.features}}
+                  <p class="feature">{{this}}</p>
+                {{/each}}
+              </div>
+              {{#if this.immediate}}
+                <p class="l-immediate label">{{this.contactDetails.name}}</p>
+                <p class="immediate label">{{this.contactDetails.email}}</p>
+              {{/if}}
+            </li>
+          {{/each}}
         </ul>
       {{else}}
         <p class="no-match">Oh no! There are no results to match your search.</p>
@@ -101,7 +102,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"></script>
-    <script src="handlebars-intl/dist/handlebars-intl.min.js"></script>
     <script src="apt-data.js"></script>
     <script src="apt-filter.js"></script>
     <script src="main.js"></script>
