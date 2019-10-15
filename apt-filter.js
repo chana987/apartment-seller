@@ -8,13 +8,9 @@ const findRelevantApts = function (address, minPrice, maxPrice, minRooms, maxRoo
         a.price >= (minPrice || 0) &&
         a.price <= (maxPrice || a.price) &&
         a.rooms >= (minRooms || 0) &&
-        a.rooms <= (maxRooms || a.rooms)
+        a.rooms <= (maxRooms || a.rooms) && 
+        a.immediate === (immediate[0].checked || a.immediate) &&
+        a.parking === (parking[0].checked || a.parking)
     )
-
-    immediate = !immediate[0].checked
-    relevantApts = immediate ? relevantApts : relevantApts.filter(a => (a.immediate)) 
-    parking = !parking[0].checked
-    relevantApts = parking ? relevantApts : relevantApts.filter(a => (a.parking)) 
-
     return relevantApts
 }

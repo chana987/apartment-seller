@@ -1,5 +1,7 @@
 * {
   color: #ddc9b3;
+  margin: auto 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -59,22 +61,30 @@ label {
   background-color: #f1f1f1;
 }
 
+#results-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .result {
   font-family: "Raleway", sans-serif;
   display: grid;
-  grid-template-columns: 350px 90px 280px;
+  grid-template-columns: 90px 230px;
   grid-template-areas:
-    "i la a"
-    "i lpr p"
-    "i lr r"
-    "i park feat"
-    "i limm imm";
+    "i i"
+    "la a"
+    "lpr p"
+    "lr r"
+    "park feat"
+    "limm imm";
+  grid-row-gap: 20px;
   box-shadow: 1px 1px 3px #0a1612;
   margin: 20px;
   padding: 20px;
   margin-top: 50px;
   background-color: #443729;
   align-items: center;
+  width: 360px;
 }
 
 .check-group {
@@ -105,10 +115,11 @@ button:active {
 }
 
 .result > img {
-  max-width: 325px;
   grid-area: i;
+  justify-self: center;
   box-shadow: 1px 1px 3px black;
   border-radius: 5px;
+  max-width: 100%;
 }
 
 .result > .label {
