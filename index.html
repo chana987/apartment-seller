@@ -72,7 +72,8 @@
               <p class="l-addr label">Address:</p>
               <p class="address">{{this.address}}</p>
               <p class="l-price label">Price: </p>
-              <p class="price">${{this.price}}</p>
+              <p class="price">
+                {{formatNumber price style="currency" currency="USD"}}</p>
               <p class="l-rooms label">Rooms: </p>
               <p class="rooms">{{this.rooms}}</p>
             {{#if this.parking}}
@@ -101,7 +102,8 @@
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
       crossorigin="anonymous"
     ></script>
-    <script src="handlebars/handlebars-v4.4.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/handlebars-intl@1.1.2/dist/handlebars-intl.min.js"></script>
     <script src="apt-data.js"></script>
     <script src="apt-filter.js"></script>
     <script src="main.js"></script>

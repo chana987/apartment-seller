@@ -17,6 +17,7 @@ const renderApts = function (apartments) {
     //Your code goes here.
     const source = $("#template-apartments").html()
     const template = Handlebars.compile(source)
+    HandlebarsIntl.registerWith(Handlebars)
     const newHTML = template({ apartments })
     $("#results").append(newHTML)
 }
